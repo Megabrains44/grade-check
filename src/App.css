@@ -1,38 +1,165 @@
-.App {
+
+*{
+  margin: 0;
+  padding: 0;
+}
+.App{
+  background-color: #282c34;
+  min-height: 100vh;
+  color: white;
+
+}
+.App-title{
+  padding: 1.5rem 2rem;
+  font-size: 3rem;
+  text-align: center;
+}
+.App-wrapper{
+  display: flex;
+  justify-content: center;
+}
+
+.App-main{
+  color: black;
+  
+  padding: 3rem 4rem;
+
+  background-color: white;
+  border-radius: .25rem;
+}
+
+@media screen and (max-width: 700px) {
+  div.App-main{
+    padding: 2rem;
+  }
+}
+
+
+.App-main h2{
+  margin-top: 0rem;
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+}
+
+
+.input-field{
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.input-field input{
+  padding: .5rem;
+  border:none;
+  box-shadow: 0px 0px 2px 2px rgb(197, 178, 255);
+  transition: box-shadow 200ms ease-in-out;
+  font-size: 1rem;
+  width: 2rem;
+}
+.input-field input::-webkit-inner-spin-button{
+  -webkit-appearance: none;
+}
+.input-field input:focus{
+  outline: none;
+  border: none;
+  box-shadow: 0px 0px 2px 3px rgb(197, 178, 255);
+}
+
+.input-field select{
+  /* height: 2.4rem; */
+  padding: 0rem .4rem;
+  font-size: 1rem;
+  border:none;
+  box-shadow: 0px 0px 2px 2px rgb(197, 178, 255);
+}
+
+.input-field select:focus{
+  outline: none;
+  border: none;
+  box-shadow: 0px 0px 2px 4px rgb(197, 178, 255);
+}
+
+.input-field button{
+  padding: .75rem 1.25rem;
+  border:none;
+  background-color: rgb(31, 31, 191);
+  color:white;
+  border-radius: .25rem;
+  font-size: 1rem;
+}
+
+.input-field .btn-clear{
+  background-color: rgb(200, 0, 0);
+}
+
+
+.assignment{
+  padding: .75rem .25rem;
+  display:flex;
+  justify-content: space-between;
+  
+  
+}
+.assignment-details{
+  display:flex;
+  gap: 2rem;
+  
+
+}
+.assignment h6{
+  text-transform: uppercase;
+  color: rgb(67, 2, 2);
+  font-size: 1rem;
+}
+.assignment p{
+  font-size: 1.4rem;
+}
+.assignment button{
+  padding: .5rem .75rem;
+  background-color: rgb(255, 52, 52);
+  border:none;
+  font-size: 1rem;
+  border-radius: .25rem;
+}
+
+.bottom-panel h4{
+  
+  text-transform: uppercase;
+}
+.bottom-panel{
+  margin: 1.5rem 0rem;
+}
+.bottom-panel p{
+  font-weight: 600;
+  font-size: 2.2rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.bottom-panel{
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  gap: 2rem;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border: 2px solid rgb(174, 235, 255) ;
+  padding: 1rem;
+  border-radius: .6rem;
 }
 
-.App-link {
-  color: #61dafb;
+.assignments{
+  max-height: 25rem;
+  overflow: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.assignment{
+  border-bottom: 1px solid lightblue;
+}
+.assignments::-webkit-scrollbar{
+  background-color: black;
+  width: .6rem;
+  border-radius: 100vw;
+}
+.assignments::-webkit-scrollbar-thumb{
+  background-color: gray;
+  border-radius: 100vw;
 }
