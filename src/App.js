@@ -15,12 +15,12 @@ function UserControl({addAssignment, clearAssignments}) {
   }
 
   function inputValidation(e){
-    
-    if (!isNaN(parseFloat(e.target.value)) || e.target.value.length === 0)setGrade(e.target.value)
+    if (e.target.value.length > 4) return;
+    setGrade(e.target.value)
   }
   return (
     <form className='input-field' onSubmit={submitListener}>
-      <input type="text" maxLength={3} onChange={inputValidation} value={grade}/>
+      <input type="number" maxLength={3} onChange={inputValidation} value={grade}/>
       <select onChange={e => setWeightage(e.target.value)} value={weightage}>
         <option value={0.4} name="formative">Formative</option>
         <option value={0.6} name="summative">Summative</option>

@@ -54,7 +54,7 @@
   box-shadow: 0px 0px 2px 2px rgb(197, 178, 255);
   transition: box-shadow 200ms ease-in-out;
   font-size: 1rem;
-  width: 2rem;
+  width: 2.3rem;
 }
 .input-field input::-webkit-inner-spin-button{
   -webkit-appearance: none;
