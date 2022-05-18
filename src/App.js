@@ -1,5 +1,5 @@
 import './App.css';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 function UserControl({addAssignment, clearAssignments}) {
   const [grade, setGrade] = useState("");
@@ -108,8 +108,13 @@ function App() {
   }
   function addAssignment(grade, weightage) {
     setAssignments([...assignments, {grade, weightage}]);
-    assignmentsRef.current.scrollTop = assignmentsRef.current.scrollHeight;
+    
   }
+
+
+  useEffect(() => {
+    assignmentsRef.current.scrollTop = assignmentsRef.current.scrollHeight;
+  }, [assignments])
   function getAvgGrade() {
     let allowed = {
       "formative": true,
