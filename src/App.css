@@ -51,8 +51,9 @@
 .input-field input{
   padding: .5rem;
   border:none;
-  box-shadow: 0px 0px 2px 2px rgb(197, 178, 255);
-  transition: box-shadow 200ms ease-in-out;
+  /* box-shadow: 0px 0px 2px 2px rgb(197, 178, 255); */
+  border: 2px solid rgb(186, 162, 255);
+  transition: border 100ms ease-in-out;
   font-size: 1rem;
   width: 2.3rem;
 }
@@ -61,22 +62,21 @@
 }
 .input-field input:focus{
   outline: none;
-  border: none;
-  box-shadow: 0px 0px 2px 3px rgb(197, 178, 255);
+  /* border: none; */
+  /* border: 2px solid rgb(213, 201, 248); */
 }
 
 .input-field select{
   /* height: 2.4rem; */
   padding: 0rem .4rem;
   font-size: 1rem;
-  border:none;
-  box-shadow: 0px 0px 2px 2px rgb(197, 178, 255);
+  border: 2px solid rgb(186, 162, 255);
 }
 
 .input-field select:focus{
   outline: none;
-  border: none;
-  box-shadow: 0px 0px 2px 4px rgb(197, 178, 255);
+  /* border: none; */
+  /* border: 2px solid rgb(213, 201, 248); */
 }
 
 .input-field button{
@@ -123,11 +123,12 @@
 }
 
 .bottom-panel h4{
-  
+  color: rgb(160, 160, 160);
   text-transform: uppercase;
 }
 .bottom-panel{
   margin: 1.5rem 0rem;
+
 }
 .bottom-panel p{
   font-weight: 600;
@@ -143,6 +144,21 @@
   border: 2px solid rgb(174, 235, 255) ;
   padding: 1rem;
   border-radius: .6rem;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 700px){
+  div.bottom-panel div p{
+    font-size: 1.9rem;
+  }
+  div.bottom-panel div h4{
+    font-size: .7rem;
+  }
+  .assignment-data p{
+    font-size: 1.2rem;
+  }
+  .assignment-data h6{
+    font-size: .8rem;
+  }
 }
 
 .assignments{
@@ -162,4 +178,18 @@
 .assignments::-webkit-scrollbar-thumb{
   background-color: gray;
   border-radius: 100vw;
+}
+
+.assignment-idx{
+  font-size: 1.3rem;
+  display: grid;
+  justify-items: center;
+  height: 100%;
+  font-weight: 600;
+}
+
+.assignment-data{
+  display: flex; 
+  gap: 1.4rem;
+
 }

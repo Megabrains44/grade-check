@@ -42,14 +42,17 @@ function Assignment({
   return (
     <div className='assignment'>
       <div className='assignment-details'>
+        <div className='assignment-idx'>{idx+1}</div>
+        <div className="assignment-data">
 
-        <div >
-          <h6>Grade</h6>
-          <p>{grade}%</p>
-        </div>
-        <div>
-          <h6>Weightage</h6>
-          <p>{weightage === .4 ? "Formative" : "Summative"}</p>
+          <div >
+            <h6>Grade</h6>
+            <p>{grade}%</p>
+          </div>
+          <div>
+            <h6>Weightage</h6>
+            <p>{weightage === .4 ? "Formative" : "Summative"}</p>
+          </div>
         </div>
       </div>
       <button onClick={() => deleteAssignment(idx)}>Delete</button>
@@ -111,7 +114,7 @@ function App() {
     
   }
 
-
+  
   useEffect(() => {
     assignmentsRef.current.scrollTop = assignmentsRef.current.scrollHeight;
   }, [assignments])
